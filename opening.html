@@ -1,1 +1,37 @@
 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="center">
+
+<div id="text"></div>
+
+<script>
+let messages = [
+"เรื่องราวบางเรื่อง",
+"เริ่มต้นจากคนแปลกหน้า",
+"แล้ววันหนึ่ง",
+"พวกเขากลายเป็นทุกอย่างของกันและกัน"
+];
+
+let i=0;
+
+function showText(){
+    if(i < messages.length){
+        document.getElementById("text").innerHTML = messages[i];
+        i++;
+        setTimeout(showText,2000);
+    }else{
+        window.location.href="video.html";
+    }
+}
+
+showText();
+</script>
+
+</body>
+</html>
