@@ -1,18 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Sevendays The Team</title>
-<link rel="stylesheet" href="css/style.css">
+<title>sevendaysthe_team</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="center">
 
-<h1>พร้อมไหม?</h1>
+<div class="container">
+    <h1 class="title">พร้อมไหม?</h1>
+    <p class="subtitle">ก่อนที่เรื่องราวจะเริ่มอีกครั้ง</p>
 
-<button onclick="goNext()">เรา...พร้อมแล้ว</button>
+    <button class="startBtn" onclick="goToOpening()">
+        เรา...พร้อมแล้ว
+    </button>
+</div>
 
-<script src="js/script.js"></script>
+<!-- fade screen -->
+<div id="fade"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
