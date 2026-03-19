@@ -1,22 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Memory</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    overflow:hidden;
+}
+
+/* ให้คลิปเต็มจอจริง */
+.video-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.video-container iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+</style>
 </head>
 
 <body>
 
-<iframe width="100%" height="100%"
-src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&mute=1"
-frameborder="0"
+<div class="video-container">
+<iframe
+src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&mute=1&controls=0&rel=0"
 allow="autoplay; fullscreen"
 allowfullscreen>
 </iframe>
+</div>
 
 <script>
+// เวลาคลิปจบ (6 นาที = 360000 ms)
 setTimeout(()=>{
     window.location.href="ending.html";
-},360000); // 6 นาที
+},360000);
 </script>
 
 </body>
