@@ -5,80 +5,75 @@ body{
     overflow:hidden;
 }
 
-.center{
-    height:100vh;
+/* ปุ่มเริ่ม */
+#startScreen{
+    position:fixed;
+    width:100%;
+    height:100%;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    background:black;
 }
 
-.cover{
-    width:220px;
-    border-radius:20px;
-    margin-bottom:30px;
-}
-
-button{
-    padding:14px 28px;
-    font-size:18px;
+#startBtn{
+    font-size:26px;
+    padding:18px 40px;
     border:none;
-    border-radius:30px;
+    border-radius:40px;
     background:white;
     cursor:pointer;
 }
 
-#fadeScreen{
+/* fade ดำ */
+#fade{
     position:fixed;
     width:100%;
     height:100%;
     background:black;
     opacity:0;
     pointer-events:none;
-    transition:1.5s;
+    transition:opacity 2s;
+    z-index:5;
 }
 
-.fadeIn{
-    opacity:1 !important;
-}
-
-.videoScene{
-    display:none;
+/* youtube */
+#youtubeContainer{
     position:fixed;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+#player{
     width:100%;
     height:100%;
 }
 
-#player iframe{
-    width:100vw;
-    height:100vh;
-    border:none;
-}
-
-#video2{
-    width:100vw;
-    height:100vh;
-    object-fit:cover;
-}
-
-#messageScene{
-    display:none;
+/* ข้อความจบ */
+#endingText{
     position:fixed;
     width:100%;
     height:100%;
-    background:black;
     color:white;
+    display:none;
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    font-size:28px;
     text-align:center;
 }
 
-h1{
+#endingText p{
     opacity:0;
-    transition:2s;
+    transition:opacity 2s;
 }
 
-.showText{
-    opacity:1;
+/* คลิป2 */
+#video2{
+    position:fixed;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
 }
