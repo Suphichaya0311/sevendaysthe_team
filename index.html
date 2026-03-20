@@ -2,23 +2,40 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>sevendaysthe_team</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somewhere</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="center">
+<body>
 
-<div class="container">
-    <h1 class="title">พร้อมไหม?</h1>
-    <p class="subtitle">ก่อนที่เรื่องราวจะเริ่มอีกครั้ง</p>
-
-    <button class="startBtn" onclick="goToOpening()">
-        เรา...พร้อมแล้ว
-    </button>
+<!-- หน้าเริ่ม -->
+<div id="startPage" class="page show">
+    <button id="startBtn">เรา…พร้อมแล้ว</button>
 </div>
 
-<!-- fade screen -->
-<div id="fade"></div>
+<!-- จอดำ -->
+<div id="fadeScreen"></div>
+
+<!-- คลิป 1 -->
+<div id="videoScene1" class="videoScene">
+    <video id="video1" playsinline>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- ข้อความซึ้ง -->
+<div id="messageScene">
+    <p id="msg1">บางช่วงเวลาในชีวิต<br>เราไม่ได้อยากให้มันจบเลย</p>
+    <p id="msg2">แล้วเจอกันในวันที่เราเติบโต 🤍</p>
+</div>
+
+<!-- คลิป 2 -->
+<div id="videoScene2" class="videoScene">
+    <video id="video2" playsinline>
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+</div>
 
 <script src="script.js"></script>
 </body>
