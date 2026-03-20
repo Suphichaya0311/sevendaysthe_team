@@ -9,32 +9,36 @@
 
 <body>
 
-<!-- ปุ่มเริ่ม -->
+<!-- หน้าเริ่ม -->
 <div id="startScreen">
     <button id="startBtn">เรา…พร้อมแล้ว</button>
 </div>
 
-<!-- จอดำ -->
+<!-- fade -->
 <div id="fade"></div>
 
-<!-- คลิป YouTube -->
-<div id="youtubeContainer">
-    <div id="player"></div>
+<!-- youtube -->
+<div id="youtubeBox">
+    <iframe
+        id="youtubeVideo"
+        src=""
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
 </div>
 
 <!-- ข้อความจบ -->
-<div id="endingText">
-    <p id="line1">บางช่วงเวลาในชีวิต</p>
-    <p id="line2">เราไม่ได้อยากให้มันจบเลย</p>
-    <p id="line3">แล้วเจอกัน</p>
-    <p id="line4">ในวันที่เราเติบโต</p>
+<div id="ending">
+    <p id="t1">บางช่วงเวลาในชีวิต</p>
+    <p id="t2">เราไม่ได้อยากให้มันจบเลย</p>
+    <p id="t3">แล้วเจอกัน</p>
+    <p id="t4">ในวันที่เราเติบโต</p>
 </div>
 
-<!-- คลิปที่2 -->
+<!-- คลิปสุดท้าย -->
 <video id="video2" src="video2.mp4"></video>
 
-<script src="https://www.youtube.com/iframe_api"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
