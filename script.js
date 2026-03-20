@@ -1,97 +1,61 @@
-const startBtn = document.getElementById("startBtn");
-const fade = document.getElementById("fadeScreen");
-
-const videoScene1 = document.getElementById("videoScene1");
-const messageScene = document.getElementById("messageScene");
-const msg1 = document.getElementById("msg1");
-const msg2 = document.getElementById("msg2");
-
-const videoScene2 = document.getElementById("videoScene2");
-const video2 = document.getElementById("video2");
-
 let player;
 
-
-/* โหลด YouTube */
+// โหลด YouTube
 function onYouTubeIframeAPIReady() {
-
     player = new YT.Player('player', {
-        videoId: 'GRd0e_EyWUs', // คลิปที่1
+        videoId: '_p_Q439Kl68', // ⭐ คลิปแรกของออย
         playerVars:{
             autoplay:0,
             controls:0,
             rel:0
         },
         events:{
-            'onStateChange': onPlayerStateChange
+            onStateChange:onPlayerStateChange
         }
     });
 }
 
+// กดปุ่มเริ่ม
+document.getElementById("startBtn").onclick = function(){
 
-/* กดเริ่ม */
-startBtn.onclick = () => {
+    document.getElementById("startScreen").style.display="none";
 
-    document.getElementById("startPage").style.display="none";
-
-    fade.classList.add("fadeIn");
+    const fade=document.getElementById("fade");
+    fade.style.opacity=1;
 
     setTimeout(()=>{
-        fade.classList.remove("fadeIn");
-        videoScene1.style.display="block";
-        player.playVideo();
-    },1500);
+        document.getElementById("youtubeContainer").style.display="block";
+        player.playVideo(); // เล่น + มีเสียง
+    },2000);
 };
 
-
-/* คลิป1จบ */
+// เมื่อคลิป1จบ
 function onPlayerStateChange(event){
-
     if(event.data === YT.PlayerState.ENDED){
-
-        videoScene1.style.display="none";
-        showMessage();
+        showEnding();
     }
 }
 
+// แสดงข้อความจบ
+function showEnding(){
 
-function showMessage(){
+    document.getElementById("youtubeContainer").style.display="none";
 
-    messageScene.style.display="flex";
+    const ending=document.getElementById("endingText");
+    ending.style.display="flex";
 
+    setTimeout(()=> line1.style.opacity=1,1000);
+    setTimeout(()=> line2.style.opacity=1,3500);
+    setTimeout(()=> line3.style.opacity=1,6000);
+    setTimeout(()=> line4.style.opacity=1,8500);
+
+    // เล่นคลิป2
     setTimeout(()=>{
-        msg1.classList.add("showText");
-    },800);
+        ending.style.display="none";
 
-    setTimeout(()=>{
-        msg2.classList.add("showText");
-    },3500);
+        const v2=document.getElementById("video2");
+        v2.style.display="block";
+        v2.play();
 
-    setTimeout(()=>{
-        startVideo2();
-    },6500);
-}
-
-
-function startVideo2(){
-
-    messageScene.style.display="none";
-
-    fade.classList.add("fadeIn");
-
-    setTimeout(()=>{
-
-        fade.classList.remove("fadeIn");
-
-        videoScene2.style.display="block";
-
-        video2.muted=false;
-        video2.volume=1;
-
-        video2.play().catch(()=>{
-            video2.muted=true;
-            video2.play();
-        });
-
-    },1500);
+    },12000);
 }
