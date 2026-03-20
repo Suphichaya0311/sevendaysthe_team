@@ -1,11 +1,11 @@
 body{
     margin:0;
     background:black;
-    font-family:sans-serif;
     overflow:hidden;
+    font-family:sans-serif;
 }
 
-/* ปุ่มเริ่ม */
+/* หน้าเริ่ม */
 #startScreen{
     position:fixed;
     width:100%;
@@ -13,45 +13,43 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:black;
 }
 
 #startBtn{
     font-size:26px;
     padding:18px 40px;
-    border:none;
     border-radius:40px;
+    border:none;
     background:white;
     cursor:pointer;
 }
 
-/* fade ดำ */
+/* fade */
 #fade{
     position:fixed;
     width:100%;
     height:100%;
     background:black;
     opacity:0;
-    pointer-events:none;
     transition:opacity 2s;
     z-index:5;
 }
 
 /* youtube */
-#youtubeContainer{
+#youtubeBox{
     position:fixed;
     width:100%;
     height:100%;
     display:none;
 }
 
-#player{
+#youtubeBox iframe{
     width:100%;
     height:100%;
 }
 
-/* ข้อความจบ */
-#endingText{
+/* ending text */
+#ending{
     position:fixed;
     width:100%;
     height:100%;
@@ -64,12 +62,12 @@ body{
     text-align:center;
 }
 
-#endingText p{
+#ending p{
     opacity:0;
     transition:opacity 2s;
 }
 
-/* คลิป2 */
+/* video2 */
 #video2{
     position:fixed;
     width:100%;
