@@ -3,41 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Memory</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- หน้าเริ่ม -->
-<div id="startPage" class="center">
-    <img src="images/7ยับ(1).jpg" class="cover">
+<!-- ปุ่มเริ่ม -->
+<div id="startScreen">
     <button id="startBtn">เรา…พร้อมแล้ว</button>
 </div>
 
-<!-- fade ดำ -->
-<div id="fadeScreen"></div>
+<!-- จอดำ -->
+<div id="fade"></div>
 
-<!-- คลิป 1 (YouTube) -->
-<div id="videoScene1" class="videoScene">
+<!-- คลิป YouTube -->
+<div id="youtubeContainer">
     <div id="player"></div>
 </div>
 
-<!-- ข้อความ -->
-<div id="messageScene">
-    <h1 id="msg1">บางช่วงเวลาในชีวิต เราไม่ได้อยากให้มันจบเลย</h1>
-    <h1 id="msg2">แล้วเจอกันในวันที่เติบโต 🤍</h1>
+<!-- ข้อความจบ -->
+<div id="endingText">
+    <p id="line1">บางช่วงเวลาในชีวิต</p>
+    <p id="line2">เราไม่ได้อยากให้มันจบเลย</p>
+    <p id="line3">แล้วเจอกัน</p>
+    <p id="line4">ในวันที่เราเติบโต</p>
 </div>
 
-<!-- คลิป 2 -->
-<div id="videoScene2" class="videoScene">
-    <video id="video2" src="video2.mp4"></video>
-</div>
+<!-- คลิปที่2 -->
+<video id="video2" src="video2.mp4"></video>
 
-<script src="script.js"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
