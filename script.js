@@ -1,10 +1,7 @@
 const startBtn = document.getElementById("startBtn");
-
 const fade = document.getElementById("fadeScreen");
 
 const videoScene1 = document.getElementById("videoScene1");
-const video1 = document.getElementById("video1");
-
 const messageScene = document.getElementById("messageScene");
 const msg1 = document.getElementById("msg1");
 const msg2 = document.getElementById("msg2");
@@ -12,42 +9,54 @@ const msg2 = document.getElementById("msg2");
 const videoScene2 = document.getElementById("videoScene2");
 const video2 = document.getElementById("video2");
 
+let player;
 
-/* กดครั้งเดียวเริ่มทั้งหมด */
-startBtn.addEventListener("click", () => {
+
+/* โหลด YouTube */
+function onYouTubeIframeAPIReady() {
+
+    player = new YT.Player('player', {
+        videoId: 'GRd0e_EyWUs', // คลิปที่1
+        playerVars:{
+            autoplay:0,
+            controls:0,
+            rel:0
+        },
+        events:{
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+
+/* กดเริ่ม */
+startBtn.onclick = () => {
 
     document.getElementById("startPage").style.display="none";
 
     fade.classList.add("fadeIn");
 
     setTimeout(()=>{
-        startVideo1();
+        fade.classList.remove("fadeIn");
+        videoScene1.style.display="block";
+        player.playVideo();
     },1500);
+};
 
-});
 
+/* คลิป1จบ */
+function onPlayerStateChange(event){
 
-function startVideo1(){
+    if(event.data === YT.PlayerState.ENDED){
 
-    fade.classList.remove("fadeIn");
-
-    videoScene1.style.display="block";
-
-    video1.muted = false;
-    video1.volume = 1;
-
-    video1.play().catch(()=>{
-        video1.muted=true;
-        video1.play();
-    });
-
+        videoScene1.style.display="none";
+        showMessage();
+    }
 }
 
 
-/* คลิปแรกจบ */
-video1.onended = ()=>{
+function showMessage(){
 
-    videoScene1.style.display="none";
     messageScene.style.display="flex";
 
     setTimeout(()=>{
@@ -61,16 +70,19 @@ video1.onended = ()=>{
     setTimeout(()=>{
         startVideo2();
     },6500);
-};
+}
 
 
 function startVideo2(){
 
     messageScene.style.display="none";
+
     fade.classList.add("fadeIn");
 
     setTimeout(()=>{
+
         fade.classList.remove("fadeIn");
+
         videoScene2.style.display="block";
 
         video2.muted=false;
