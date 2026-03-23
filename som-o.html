@@ -1,38 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="letter.css">
-<title>ถึง ya 🤍</title>
+<title>For Som-o 🤍</title>
+
+<style>
+
+body{
+margin:0;
+background:black;
+overflow:hidden;
+font-family:sans-serif;
+}
+
+.video-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+.nextBtn{
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ffffffcc;
+cursor:pointer;
+}
+
+</style>
 </head>
 
 <body>
 
-<audio autoplay loop>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
+<div class="video-container">
 
-<div class="letter">
+<iframe
+src="https://www.youtube.com/embed/_p_Q439Kl68?enablejsapi=1"
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
 
-<h2>ถึง som-o 🤍</h2>
-
-<p>
-บางช่วงเวลาในชีวิต เราไม่ได้อยากให้มันจบเลย<br><br>
-
-ขอบคุณที่อยู่ในทุกช่วงธรรมดาที่กลายเป็นความทรงจำพิเศษ  
-ขอบคุณที่ทำให้เสียงหัวเราะมันเกิดขึ้นง่ายขนาดนี้  
-บางทีเราอาจไม่ได้พูดบ่อย  
-แต่การมีเธออยู่ มันทำให้หลายวันยาก ๆ ผ่านไปได้จริง ๆ<br><br>
-
-ไม่ว่าอนาคตเราจะโตไปทางไหน  
-ขอให้เธอเจอโลกที่ใจดีกับเธอเสมอ  
-และถ้าวันไหนเหนื่อย  
-อยากให้จำไว้ว่าครั้งหนึ่ง  
-มีเพื่อนคนหนึ่งภูมิใจในตัวเธอมาก ๆ 🤍
-</p>
+<button class="nextBtn" onclick="goLetter()">
+🤍 เปิดจดหมาย
+</button>
 
 </div>
+
+<script>
+function goLetter(){
+window.location.href="ya_letter.html";
+}
+</script>
 
 </body>
 </html>
