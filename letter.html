@@ -1,39 +1,38 @@
+body{
+background:#fff0f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:sans-serif;
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-</head>
+.letter{
+width:70%;
+max-width:600px;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+animation:openLetter 1.5s ease;
+}
 
-<body class="letter-bg">
+@keyframes openLetter{
+from{
+transform:scale(0.5) rotateX(90deg);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
 
-<div class="letter">
+h2{
+text-align:center;
+color:#ff7aa2;
+}
 
-<h2>ถึงเพื่อนของเรา 🤍</h2>
-
-<p>
-จากวันแรกที่เราเจอกัน  
-ไม่มีใครรู้เลยว่าความธรรมดาจะกลายเป็นความทรงจำที่สำคัญขนาดนี้
-</p>
-
-<p>
-เสียงหัวเราะ เรื่องบ้า ๆ การบ้านที่ไม่ทัน  
-วันที่เหนื่อย และวันที่ยังมีกันอยู่ข้าง ๆ
-</p>
-
-<p>
-ถึงวันหนึ่งเราจะเดินคนละทาง  
-แต่ช่วงเวลานี้จะอยู่กับเราไปตลอด
-</p>
-
-<p>
-แล้วเจอกันอีกครั้ง  
-ในวันที่เราเติบโต 🤍
-</p>
-
-</div>
-
-<audio src="music.mp3" autoplay loop></audio>
-
-</body>
-</html>
+p{
+line-height:1.8;
+}
