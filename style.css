@@ -1,71 +1,48 @@
 body{
-margin:0;
-font-family:sans-serif;
-background:black;
-color:white;
-text-align:center;
-}
-
-.center{
+font-family: sans-serif;
+background: linear-gradient(#ffd6e7,#e6f0ff);
 height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 }
 
-button{
-padding:18px 40px;
-font-size:22px;
-border:none;
-border-radius:40px;
+.container{
 background:white;
-color:black;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+input{
+font-size:24px;
+text-align:center;
+margin:15px;
+padding:10px;
+border-radius:10px;
+border:2px solid #ffc0cb;
+width:200px;
+}
+
+.keypad{
+display:grid;
+grid-template-columns:repeat(3,80px);
+gap:10px;
+justify-content:center;
+}
+
+button{
+font-size:20px;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#ffe4ec;
 cursor:pointer;
-transition:.4s;
+transition:0.2s;
 }
 
 button:hover{
-transform:scale(1.05);
-}
-
-.fade{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-opacity:0;
-transition:1.5s;
-pointer-events:none;
-}
-
-video, iframe{
-width:100%;
-height:100vh;
-object-fit:cover;
-border:none;
-}
-
-/* จดหมาย */
-.letter-bg{
-background:#f6f3ee;
-color:#333;
-}
-
-.letter{
-background:white;
-max-width:700px;
-margin:auto;
-margin-top:10vh;
-padding:40px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-animation:open 2s;
-}
-
-@keyframes open{
-from{opacity:0; transform:scale(.85);}
-to{opacity:1; transform:scale(1);}
+background:#ffd1dc;
+transform:scale(1.1);
 }
