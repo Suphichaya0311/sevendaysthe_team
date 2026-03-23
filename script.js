@@ -1,50 +1,31 @@
-const startBtn = document.getElementById("startBtn");
-const fade = document.getElementById("fade");
-const youtubeBox = document.getElementById("youtubeBox");
-const youtubeVideo = document.getElementById("youtubeVideo");
+function go(page){
+document.querySelector(".fade").style.opacity=1;
 
-startBtn.onclick = () => {
+setTimeout(()=>{
+window.location.href=page;
+},1500);
+}
 
-    document.getElementById("startScreen").style.display="none";
+/* เปิดเสียง youtube */
+function playSound(){
+let iframe=document.getElementById("yt");
+iframe.src+="&autoplay=1&mute=0";
+document.getElementById("soundBtn").style.display="none";
+}
 
-    // fade ดำ
-    fade.style.opacity=1;
+/* ไปหน้าจบอัตโนมัติ */
+function autoEnding(){
+setTimeout(()=>{
+window.location.href="ending.html";
+},180000); // 3 นาที
+}
 
-    setTimeout(()=>{
+/* เล่นคลิป2 */
+function playVideo2(){
+let v=document.getElementById("video2");
+v.play();
 
-        youtubeBox.style.display="block";
-
-        // ⭐ ใส่ลิงก์คลิปหลักตรงนี้
-        youtubeVideo.src =
-        "https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&mute=0";
-
-    },2000);
-};
-
-
-// 👉 ประมาณเวลาคลิปแรก (แก้ตามจริงได้)
-setTimeout(showEnding, 240000); // 4 นาที
-
-
-function showEnding(){
-
-    youtubeBox.style.display="none";
-
-    const ending=document.getElementById("ending");
-    ending.style.display="flex";
-
-    setTimeout(()=> t1.style.opacity=1,1000);
-    setTimeout(()=> t2.style.opacity=1,3500);
-    setTimeout(()=> t3.style.opacity=1,6000);
-    setTimeout(()=> t4.style.opacity=1,8500);
-
-    // ต่อคลิป2
-    setTimeout(()=>{
-        ending.style.display="none";
-
-        const v2=document.getElementById("video2");
-        v2.style.display="block";
-        v2.play();
-
-    },12000);
+v.onended=()=>{
+window.location.href="letter.html";
+}
 }
