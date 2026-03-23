@@ -1,77 +1,71 @@
 body{
-    margin:0;
-    background:black;
-    overflow:hidden;
-    font-family:sans-serif;
+margin:0;
+font-family:sans-serif;
+background:black;
+color:white;
+text-align:center;
 }
 
-/* หน้าเริ่ม */
-#startScreen{
-    position:fixed;
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.center{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
-#startBtn{
-    font-size:26px;
-    padding:18px 40px;
-    border-radius:40px;
-    border:none;
-    background:white;
-    cursor:pointer;
+button{
+padding:18px 40px;
+font-size:22px;
+border:none;
+border-radius:40px;
+background:white;
+color:black;
+cursor:pointer;
+transition:.4s;
 }
 
-/* fade */
-#fade{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:black;
-    opacity:0;
-    transition:opacity 2s;
-    z-index:5;
+button:hover{
+transform:scale(1.05);
 }
 
-/* youtube */
-#youtubeBox{
-    position:fixed;
-    width:100%;
-    height:100%;
-    display:none;
+.fade{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+opacity:0;
+transition:1.5s;
+pointer-events:none;
 }
 
-#youtubeBox iframe{
-    width:100%;
-    height:100%;
+video, iframe{
+width:100%;
+height:100vh;
+object-fit:cover;
+border:none;
 }
 
-/* ending text */
-#ending{
-    position:fixed;
-    width:100%;
-    height:100%;
-    color:white;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    font-size:28px;
-    text-align:center;
+/* จดหมาย */
+.letter-bg{
+background:#f6f3ee;
+color:#333;
 }
 
-#ending p{
-    opacity:0;
-    transition:opacity 2s;
+.letter{
+background:white;
+max-width:700px;
+margin:auto;
+margin-top:10vh;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+animation:open 2s;
 }
 
-/* video2 */
-#video2{
-    position:fixed;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:none;
+@keyframes open{
+from{opacity:0; transform:scale(.85);}
+to{opacity:1; transform:scale(1);}
 }
