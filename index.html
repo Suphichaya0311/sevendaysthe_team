@@ -1,43 +1,17 @@
 <!DOCTYPE html>
-<html lang="th">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memory</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- หน้าเริ่ม -->
-<div id="startScreen">
-    <button id="startBtn">เรา…พร้อมแล้ว</button>
+<div class="center">
+<h1>พร้อมไหม…</h1>
+<button onclick="go('video1.html')">เรา...พร้อมแล้ว</button>
 </div>
 
-<!-- fade -->
-<div id="fade"></div>
-
-<!-- youtube -->
-<div id="youtubeBox">
-    <iframe
-        id="youtubeVideo"
-        src=""
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-    </iframe>
-</div>
-
-<!-- ข้อความจบ -->
-<div id="ending">
-    <p id="t1">บางช่วงเวลาในชีวิต</p>
-    <p id="t2">เราไม่ได้อยากให้มันจบเลย</p>
-    <p id="t3">แล้วเจอกัน</p>
-    <p id="t4">ในวันที่เราเติบโต</p>
-</div>
-
-<!-- คลิปสุดท้าย -->
-<video id="video2" src="video2.mp4"></video>
+<div class="fade"></div>
 
 <script src="script.js"></script>
 </body>
