@@ -2,61 +2,23 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Our Memory 🤍</title>
-
-<style>
-body{
-margin:0;
-background:black;
-overflow:hidden;
-font-family:sans-serif;
-}
-
-.video{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-}
-
-iframe{
-width:100%;
-height:100%;
-border:none;
-}
-
-.enterBtn{
-position:absolute;
-bottom:50px;
-left:50%;
-transform:translateX(-50%);
-padding:16px 35px;
-font-size:18px;
-border:none;
-border-radius:30px;
-background:white;
-cursor:pointer;
-}
-</style>
+<title>🤍 For You</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="center">
 
-<div class="video">
+<h1>มีบางอย่างอยากให้ดู 🤍</h1>
 
-<iframe
-src="https://www.youtube.com/embed/_p_Q439Kl68?enablejsapi=1"
-allow="autoplay; encrypted-media"
-allowfullscreen>
-</iframe>
-
-<button class="enterBtn"
-onclick="location.href='friends.html'">
-🤍 เข้าไปดูความทรงจำ
+<button class="cute-btn" onclick="startVideo()">
+เริ่มดูเลย 🎬
 </button>
 
-</div>
+<script>
+function startVideo(){
+    window.location.href="video1.html";
+}
+</script>
 
 </body>
 </html>
