@@ -8,12 +8,14 @@
 
 <body class="video-page">
 
+<!-- ปุ่มเริ่ม -->
 <div id="overlay">
     <button class="play-btn" onclick="playVideo()">
         ▶ เปิดเสียง & เริ่มดู
     </button>
 </div>
 
+<!-- วิดีโอ -->
 <div class="video-container">
 <iframe id="ytplayer"
 src="https://www.youtube.com/embed/_p_Q439Kl68?enablejsapi=1&controls=0"
@@ -23,9 +25,15 @@ allowfullscreen>
 </iframe>
 </div>
 
+<!-- ข้อความก่อนคลิป 2 -->
+<div id="messageScreen">
+    <h1>ยังไม่หมดนะ 🤍</h1>
+    <p>มีอะไรบางอย่างอยากให้ดูต่อ...</p>
+</div>
+
 <script>
 
-let player;
+let player = document.getElementById("ytplayer");
 
 function playVideo(){
     player.contentWindow.postMessage(
@@ -35,12 +43,18 @@ function playVideo(){
     document.getElementById("overlay").style.display="none";
 }
 
-player = document.getElementById("ytplayer");
-
-/* พอคลิปจบ → ไปคลิป 2 */
+/* เวลาคลิป 7:31 */
 setTimeout(()=>{
-    window.location.href="video2.html";
-}, 451000); // 7 นาที 31 วินาที
+    showMessage();
+},451000);
+
+function showMessage(){
+    document.getElementById("messageScreen").style.display="flex";
+
+    setTimeout(()=>{
+        window.location.href="video2.html";
+    },3000);
+}
 
 </script>
 
