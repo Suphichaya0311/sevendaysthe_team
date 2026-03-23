@@ -2,42 +2,61 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>For You 🤍</title>
-<link rel="stylesheet" href="style.css">
+<title>Our Memory 🤍</title>
+
+<style>
+body{
+margin:0;
+background:black;
+overflow:hidden;
+font-family:sans-serif;
+}
+
+.video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+.enterBtn{
+position:absolute;
+bottom:50px;
+left:50%;
+transform:translateX(-50%);
+padding:16px 35px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="video">
 
-<h2>🔐 ใส่รหัสของเธอ</h2>
-<p>ลองกดดูสิ 🤍</p>
+<iframe
+src="https://www.youtube.com/embed/_p_Q439Kl68?enablejsapi=1"
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
 
-<input type="password" id="password" readonly>
-
-<div class="keypad">
-
-<button onclick="press(1)">1</button>
-<button onclick="press(2)">2</button>
-<button onclick="press(3)">3</button>
-
-<button onclick="press(4)">4</button>
-<button onclick="press(5)">5</button>
-<button onclick="press(6)">6</button>
-
-<button onclick="press(7)">7</button>
-<button onclick="press(8)">8</button>
-<button onclick="press(9)">9</button>
-
-<button onclick="clearPass()">⌫</button>
-<button onclick="press(0)">0</button>
-<button onclick="checkPass()">💌</button>
+<button class="enterBtn"
+onclick="location.href='friends.html'">
+🤍 เข้าไปดูความทรงจำ
+</button>
 
 </div>
-
-</div>
-
-<script src="script.js"></script>
 
 </body>
 </html>
