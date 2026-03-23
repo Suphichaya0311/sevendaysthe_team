@@ -1,22 +1,48 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+<meta charset="UTF-8">
+<title>Video 1</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="autoEnding()">
+<body class="video-page">
 
-<iframe id="yt"
+<div id="overlay">
+    <button class="play-btn" onclick="playVideo()">
+        ▶ เปิดเสียง & เริ่มดู
+    </button>
+</div>
+
+<div class="video-container">
+<iframe id="ytplayer"
 src="https://www.youtube.com/embed/_p_Q439Kl68?enablejsapi=1&controls=0"
-allow="autoplay"></iframe>
+frameborder="0"
+allow="autoplay; fullscreen"
+allowfullscreen>
+</iframe>
+</div>
 
-<button id="soundBtn"
-style="position:fixed;bottom:40px;left:50%;transform:translateX(-50%);"
-onclick="playSound()">🔊 เปิดเสียง</button>
+<script>
 
-<div class="fade"></div>
+let player;
 
-<script src="script.js"></script>
+function playVideo(){
+    player.contentWindow.postMessage(
+        '{"event":"command","func":"playVideo","args":""}',
+        '*'
+    );
+    document.getElementById("overlay").style.display="none";
+}
+
+player = document.getElementById("ytplayer");
+
+/* พอคลิปจบ → ไปคลิป 2 */
+setTimeout(()=>{
+    window.location.href="video2.html";
+}, 451000); // 7 นาที 31 วินาที
+
+</script>
+
 </body>
 </html>
