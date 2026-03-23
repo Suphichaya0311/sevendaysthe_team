@@ -1,31 +1,31 @@
-function go(page){
-document.querySelector(".fade").style.opacity=1;
+let password="";
 
-setTimeout(()=>{
-window.location.href=page;
-},1500);
+function press(num){
+password += num;
+document.getElementById("password").value="●".repeat(password.length);
 }
 
-/* เปิดเสียง youtube */
-function playSound(){
-let iframe=document.getElementById("yt");
-iframe.src+="&autoplay=1&mute=0";
-document.getElementById("soundBtn").style.display="none";
+function clearPass(){
+password="";
+document.getElementById("password").value="";
 }
 
-/* ไปหน้าจบอัตโนมัติ */
-function autoEnding(){
-setTimeout(()=>{
-window.location.href="ending.html";
-},180000); // 3 นาที
+function checkPass(){
+
+const codes={
+"739204":"ya.html",
+"581936":"emmy.html",
+"420817":"mook.html",
+"906315":"pan.html",
+"274690":"aim.html",
+"813502":"somo.html"
+};
+
+if(codes[password]){
+window.location.href=codes[password];
+}else{
+alert("รหัสไม่ถูกนะ 🤍");
+clearPass();
 }
 
-/* เล่นคลิป2 */
-function playVideo2(){
-let v=document.getElementById("video2");
-v.play();
-
-v.onended=()=>{
-window.location.href="letter.html";
-}
 }
