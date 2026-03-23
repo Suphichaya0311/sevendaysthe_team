@@ -1,48 +1,69 @@
 body{
-font-family: sans-serif;
-background: linear-gradient(#ffd6e7,#e6f0ff);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+    margin:0;
+    font-family: "Kanit", sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#e6f0ff);
 }
 
-.container{
-background:white;
-padding:40px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+/* หน้าแรก */
+.center{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-input{
-font-size:24px;
-text-align:center;
-margin:15px;
-padding:10px;
-border-radius:10px;
-border:2px solid #ffc0cb;
-width:200px;
+h1{
+    color:#444;
 }
 
-.keypad{
-display:grid;
-grid-template-columns:repeat(3,80px);
-gap:10px;
-justify-content:center;
+/* ปุ่มน่ารัก */
+.cute-btn{
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff9ecb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
 }
 
-button{
-font-size:20px;
-padding:15px;
-border:none;
-border-radius:15px;
-background:#ffe4ec;
-cursor:pointer;
-transition:0.2s;
+.cute-btn:hover{
+    transform:scale(1.1);
 }
 
-button:hover{
-background:#ffd1dc;
-transform:scale(1.1);
+/* หน้าวิดีโอ */
+.video-page{
+    background:black;
+}
+
+/* video fullscreen */
+.video-container iframe,
+video{
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+
+/* ปุ่มเปิดเสียง */
+#overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    z-index:10;
+}
+
+.play-btn{
+    font-size:22px;
+    padding:20px 40px;
+    border:none;
+    border-radius:40px;
+    background:#ff8fc4;
+    color:white;
+    cursor:pointer;
 }
