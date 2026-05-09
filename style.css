@@ -156,3 +156,24 @@ video{
 #closeBtn:hover{
     transform:scale(1.05);
 }
+.fadeText1{
+    animation:fadeUp 3s ease;
+}
+
+.fadeText2{
+    animation:fadeUp 5s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
