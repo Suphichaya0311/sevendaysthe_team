@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Video 2</title>
+<title>Ending</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,19 +14,23 @@
 
 </video>
 
-<!-- ข้อความจบ -->
+<!-- ตอนจบ -->
 
 <div id="endingText">
 
-<p class="end1">
+<div class="floating floating1">🤍</div>
+<div class="floating floating2">✨</div>
+<div class="floating floating3">☁️</div>
+
+<h1 class="end1">
 บางช่วงเวลาในชีวิต<br>
 เราไม่ได้อยากให้มันจบเลย
-</p>
+</h1>
 
-<p class="end2">
+<h2 class="end2">
 แล้วเจอกัน<br>
 ในวันที่เราเติบโต 🤍
-</p>
+</h2>
 
 </div>
 
@@ -34,9 +38,11 @@
 
 const video = document.getElementById("video2");
 
-video.onended = function(){
+video.onended = () => {
 
-    document.getElementById("endingText").style.opacity="1";
+    video.style.display = "none";
+
+    document.getElementById("endingText").style.opacity = "1";
 
 }
 
