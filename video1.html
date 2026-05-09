@@ -2,45 +2,44 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Video 1</title>
+<title>Memory</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="video-page">
 
-<!-- ปุ่มเปิด -->
-<div id="overlay" onclick="startVideo()">
+<!-- เปิดคลิป -->
+<div id="overlay">
 
-    <button class="play-btn">
+    <button id="startBtn">
         ▶ เปิดเสียง & เริ่มดู
     </button>
 
 </div>
 
-<!-- คลิป -->
-<div class="video-container">
-
+<!-- คลิป youtube -->
 <iframe
-id="ytplayer"
-src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0&mute=0"
-allow="autoplay; fullscreen"
+id="yt"
+src="https://www.youtube.com/embed/_p_Q439Kl68?controls=0&rel=0"
 allowfullscreen>
 </iframe>
 
-</div>
+<!-- หน้าข้อความ -->
+<div id="memoryScreen">
 
-<!-- ข้อความ -->
-<div id="memoryText">
+<div class="floating floating1">🤍</div>
+<div class="floating floating2">✨</div>
+<div class="floating floating3">☁️</div>
 
-<p class="text1">
-ขอบคุณที่อยู่ในทุกช่วงเวลาของกันและกันนะ 🤍
-</p>
+<h1>
+ขอบคุณที่อยู่ในทุกช่วงเวลาของกันและกันนะ
+</h1>
 
-<p class="text2">
+<p>
 ยังมีอีกอย่างอยากให้ดูต่อ...
 </p>
 
-<button class="next-btn" onclick="goNext()">
+<button id="nextBtn">
 ดูต่อ 🎬
 </button>
 
@@ -53,27 +52,42 @@ allowfullscreen>
 
 <script>
 
-function startVideo(){
+const startBtn = document.getElementById("startBtn");
+const overlay = document.getElementById("overlay");
+const memoryScreen = document.getElementById("memoryScreen");
+const nextBtn = document.getElementById("nextBtn");
+const bgmusic = document.getElementById("bgmusic");
 
-    document.getElementById("overlay").style.display="none";
+startBtn.onclick = () => {
 
-    /* 7:31 */
-    setTimeout(()=>{
+    overlay.style.display = "none";
 
-        document.querySelector(".video-container").style.display="none";
-
-        document.body.style.background="black";
-
-        document.getElementById("memoryText").style.opacity="1";
-
-        document.getElementById("bgmusic").play();
-
-    },451000);
+    /* เล่น youtube ใหม่พร้อมเสียง */
+    document.getElementById("yt").src =
+    "https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0&mute=0";
 
 }
 
-function goNext(){
-    window.location.href="video2.html";
+/* 7 นาที 31 วิ */
+setTimeout(()=>{
+
+    /* ซ่อนคลิป */
+    document.getElementById("yt").style.display = "none";
+
+    /* ขึ้นข้อความ */
+    memoryScreen.style.opacity = "1";
+
+    /* เล่นเพลง */
+    bgmusic.play();
+
+},451000);
+
+/* ไปคลิป2 */
+
+nextBtn.onclick = () => {
+
+    window.location.href = "video2.html";
+
 }
 
 </script>
