@@ -1,73 +1,77 @@
 body{
     margin:0;
-    font-family: "Kanit", sans-serif;
-    background:linear-gradient(135deg,#ffd6e7,#e6f0ff);
+    font-family:sans-serif;
+    overflow:hidden;
 }
 
-/* หน้าแรก */
+/* หน้าเปิด */
+
 .center{
     height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#ffd6e7,#e6f0ff);
+    text-align:center;
 }
 
-h1{
-    color:#444;
-}
-
-/* ปุ่มน่ารัก */
 .cute-btn{
     padding:15px 35px;
-    font-size:18px;
     border:none;
-    border-radius:30px;
+    border-radius:40px;
     background:#ff9ecb;
     color:white;
+    font-size:20px;
     cursor:pointer;
-    transition:.3s;
-}
-
-.cute-btn:hover{
-    transform:scale(1.1);
 }
 
 /* หน้าวิดีโอ */
+
 .video-page{
     background:black;
 }
 
-/* video fullscreen */
-.video-container iframe,
+/* youtube */
+
+.video-container iframe{
+    width:100vw;
+    height:100vh;
+    border:none;
+}
+
+/* video2 */
+
 video{
     width:100vw;
     height:100vh;
     object-fit:cover;
 }
 
-/* ปุ่มเปิดเสียง */
+/* overlay */
+
 #overlay{
     position:absolute;
     width:100%;
     height:100%;
+    background:black;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:black;
     z-index:10;
 }
 
 .play-btn{
-    font-size:22px;
     padding:20px 40px;
     border:none;
-    border-radius:40px;
+    border-radius:50px;
     background:#ff8fc4;
     color:white;
+    font-size:28px;
     cursor:pointer;
 }
-/* หน้าข้อความก่อนคลิป2 */
+
+/* ข้อความก่อนคลิป2 */
 
 #memoryText{
     position:absolute;
@@ -78,64 +82,17 @@ video{
     text-align:center;
     opacity:0;
     transition:2s;
-    z-index:20;
 }
 
 .text1{
-    font-size:32px;
+    font-size:36px;
     margin-bottom:20px;
 }
 
 .text2{
-    font-size:22px;
-    opacity:0.8;
-}
-
-/* ตอนจบ */
-
-#endingText{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    color:white;
-    text-align:center;
-    opacity:0;
-    transition:3s;
-}
-
-.end1{
-    font-size:34px;
-    line-height:1.8;
-}
-
-.end2{
-    margin-top:40px;
-    font-size:28px;
-    opacity:0.9;
-}
-/* หน้าข้อความ */
-
-#memoryText{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    color:white;
-    opacity:0;
-    transition:2s;
-}
-
-.text1{
-    font-size:34px;
-    margin-bottom:20px;
-}
-
-.text2{
-    font-size:22px;
-    opacity:0.8;
+    font-size:24px;
     margin-bottom:40px;
+    opacity:0.8;
 }
 
 .next-btn{
@@ -146,4 +103,28 @@ video{
     color:white;
     font-size:20px;
     cursor:pointer;
+}
+
+/* ตอนจบ */
+
+#endingText{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    opacity:0;
+    transition:3s;
+}
+
+.end1{
+    font-size:36px;
+    line-height:1.8;
+}
+
+.end2{
+    margin-top:40px;
+    font-size:28px;
+    opacity:0.9;
 }
