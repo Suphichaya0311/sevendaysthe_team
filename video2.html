@@ -26,6 +26,10 @@
 ในวันที่เราเติบโต 🤍
 </p>
 
+<button id="closeBtn">
+ปิดความทรงจำ ✨
+</button>
+
 </div>
 
 <script>
@@ -37,6 +41,35 @@ video.onended = () => {
     video.style.display = "none";
 
     document.getElementById("endingText").style.display = "flex";
+
+}
+
+/* ปุ่มปิด */
+
+document.getElementById("closeBtn").onclick = () => {
+
+    document.body.innerHTML = `
+    
+    <div style="
+    width:100vw;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:30px;
+    font-family:sans-serif;
+    flex-direction:column;
+    ">
+    
+    <div style="opacity:0.8;">
+    ขอบคุณสำหรับทุกช่วงเวลานะ 🤍
+    </div>
+    
+    </div>
+    
+    `;
 
 }
 
