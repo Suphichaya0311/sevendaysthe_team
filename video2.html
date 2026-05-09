@@ -16,19 +16,15 @@
 
 <div id="endingText">
 
-<h1>
+<h1 class="fadeText1">
 บางช่วงเวลาในชีวิต<br>
 เราไม่ได้อยากให้มันจบเลย
 </h1>
 
-<p>
+<p class="fadeText2">
 แล้วเจอกัน<br>
 ในวันที่เราเติบโต 🤍
 </p>
-
-<button id="closeBtn">
-ปิดความทรงจำ ✨
-</button>
 
 </div>
 
@@ -40,36 +36,29 @@ video.onended = () => {
 
     video.style.display = "none";
 
-    document.getElementById("endingText").style.display = "flex";
+    const ending = document.getElementById("endingText");
 
-}
+    ending.style.display = "flex";
 
-/* ปุ่มปิด */
+    /* รอ 8 วิ แล้วค่อย fade ดำ */
 
-document.getElementById("closeBtn").onclick = () => {
+    setTimeout(() => {
 
-    document.body.innerHTML = `
-    
-    <div style="
-    width:100vw;
-    height:100vh;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:30px;
-    font-family:sans-serif;
-    flex-direction:column;
-    ">
-    
-    <div style="opacity:0.8;">
-    ขอบคุณสำหรับทุกช่วงเวลานะ 🤍
-    </div>
-    
-    </div>
-    
-    `;
+        document.body.style.transition = "3s";
+        document.body.style.opacity = "0";
+
+    },8000);
+
+    /* หลัง fade เสร็จ ปิดหน้า */
+
+    setTimeout(() => {
+
+        window.close();
+
+        /* ถ้าปิดไม่ได้ */
+        window.location.href = "about:blank";
+
+    },11000);
 
 }
 
