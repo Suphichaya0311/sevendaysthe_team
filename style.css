@@ -141,3 +141,18 @@ video{
     font-size:28px;
     opacity:0.9;
 }
+#closeBtn{
+    margin-top:40px;
+    padding:16px 36px;
+    border:none;
+    border-radius:40px;
+    background:#ff9ecb;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#closeBtn:hover{
+    transform:scale(1.05);
+}
