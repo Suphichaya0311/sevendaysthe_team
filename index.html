@@ -6,18 +6,26 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="center">
+<body class="home">
 
-<h1>มีบางอย่างอยากให้ดู 🤍</h1>
+<div class="home-content">
 
-<button class="cute-btn" onclick="startVideo()">
+<h1 class="title">
+มีบางอย่างอยากให้ดู 🤍
+</h1>
+
+<button class="start-button" onclick="goVideo()">
 เริ่มดูเลย 🎬
 </button>
 
+</div>
+
 <script>
-function startVideo(){
-    window.location.href="video1.html";
+
+function goVideo(){
+    window.location.href = "video1.html";
 }
+
 </script>
 
 </body>
