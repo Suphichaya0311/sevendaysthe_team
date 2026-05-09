@@ -8,53 +8,69 @@
 
 <body class="video-page">
 
-<!-- ปุ่มเริ่ม -->
+<!-- ปุ่มเปิดเสียง -->
 <div id="overlay">
-    <button class="play-btn" onclick="playVideo()">
+    <button class="play-btn" onclick="startAll()">
         ▶ เปิดเสียง & เริ่มดู
     </button>
 </div>
 
-<!-- วิดีโอ -->
+<!-- คลิป YouTube -->
 <div class="video-container">
 <iframe id="ytplayer"
 src="https://www.youtube.com/embed/_p_Q439Kl68?enablejsapi=1&controls=0"
-frameborder="0"
 allow="autoplay; fullscreen"
 allowfullscreen>
 </iframe>
 </div>
 
-<!-- ข้อความก่อนคลิป 2 -->
-<div id="messageScreen">
-    <h1>ยังไม่หมดนะ 🤍</h1>
-    <p>มีอะไรบางอย่างอยากให้ดูต่อ...</p>
+<!-- หน้าข้อความ -->
+<div id="memoryText">
+
+<p class="text1">
+ขอบคุณที่อยู่ในทุกช่วงเวลาของกันและกันนะ 🤍
+</p>
+
+<p class="text2">
+ยังมีอีกอย่างอยากให้ดูต่อ...
+</p>
+
 </div>
+
+<!-- เพลง -->
+<audio id="bgmusic">
+<source src="song.mp3" type="audio/mp3">
+</audio>
 
 <script>
 
-let player = document.getElementById("ytplayer");
+let player;
 
-function playVideo(){
+function startAll(){
+
     player.contentWindow.postMessage(
         '{"event":"command","func":"playVideo","args":""}',
         '*'
     );
+
     document.getElementById("overlay").style.display="none";
 }
 
-/* เวลาคลิป 7:31 */
+player = document.getElementById("ytplayer");
+
+/* ครบ 7:31 */
 setTimeout(()=>{
-    showMessage();
+
+    document.getElementById("memoryText").style.opacity="1";
+
+    document.getElementById("bgmusic").play();
+
 },451000);
 
-function showMessage(){
-    document.getElementById("messageScreen").style.display="flex";
-
-    setTimeout(()=>{
-        window.location.href="video2.html";
-    },3000);
-}
+/* อีก 10 วิ ไปคลิป 2 */
+setTimeout(()=>{
+    window.location.href="video2.html";
+},461000);
 
 </script>
 
