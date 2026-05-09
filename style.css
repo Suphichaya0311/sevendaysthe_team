@@ -67,3 +67,50 @@ video{
     color:white;
     cursor:pointer;
 }
+/* หน้าข้อความก่อนคลิป2 */
+
+#memoryText{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    opacity:0;
+    transition:2s;
+    z-index:20;
+}
+
+.text1{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.text2{
+    font-size:22px;
+    opacity:0.8;
+}
+
+/* ตอนจบ */
+
+#endingText{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    opacity:0;
+    transition:3s;
+}
+
+.end1{
+    font-size:34px;
+    line-height:1.8;
+}
+
+.end2{
+    margin-top:40px;
+    font-size:28px;
+    opacity:0.9;
+}
