@@ -20,7 +20,7 @@
 
 <iframe
 id="ytplayer"
-src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0&enablejsapi=1"
+src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0"
 allow="autoplay; fullscreen"
 allowfullscreen>
 </iframe>
@@ -38,6 +38,10 @@ allowfullscreen>
 ยังมีอีกอย่างอยากให้ดูต่อ...
 </p>
 
+<button class="next-btn" onclick="goNext()">
+ดูต่อ 🎬
+</button>
+
 </div>
 
 <!-- เพลง -->
@@ -51,30 +55,23 @@ function startVideo(){
 
     document.getElementById("overlay").style.display="none";
 
-    /* รอ 7:31 */
+    /* 7:31 */
     setTimeout(()=>{
 
-        /* ซ่อนคลิป */
         document.querySelector(".video-container").style.display="none";
 
-        /* เปลี่ยนพื้นหลังดำ */
         document.body.style.background="black";
 
-        /* ขึ้นข้อความ */
         document.getElementById("memoryText").style.opacity="1";
 
-        /* เล่นเพลง */
         document.getElementById("bgmusic").play();
 
     },451000);
 
-    /* อีก 10 วิ ไปคลิป2 */
-    setTimeout(()=>{
+}
 
-        window.location.href="video2.html";
-
-    },461000);
-
+function goNext(){
+    window.location.href="video2.html";
 }
 
 </script>
