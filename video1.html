@@ -9,18 +9,20 @@
 <body class="video-page">
 
 <!-- ปุ่มเปิด -->
-<div id="overlay">
-    <button class="play-btn" onclick="startVideo()">
+<div id="overlay" onclick="startVideo()">
+
+    <button class="play-btn">
         ▶ เปิดเสียง & เริ่มดู
     </button>
+
 </div>
 
-<!-- YouTube -->
+<!-- คลิป -->
 <div class="video-container">
 
 <iframe
 id="ytplayer"
-src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0"
+src="https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0&mute=0"
 allow="autoplay; fullscreen"
 allowfullscreen>
 </iframe>
