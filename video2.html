@@ -8,9 +8,38 @@
 
 <body class="video-page">
 
-<video id="video2" autoplay controls>
-    <source src="video2.mp4" type="video/mp4">
+<video id="video2" autoplay>
+
+<source src="video2.mp4" type="video/mp4">
+
 </video>
+
+<!-- ตอนจบ -->
+<div id="endingText">
+
+<p class="end1">
+บางช่วงเวลาในชีวิต<br>
+เราไม่ได้อยากให้มันจบเลย
+</p>
+
+<p class="end2">
+แล้วเจอกัน<br>
+ในวันที่เราเติบโต 🤍
+</p>
+
+</div>
+
+<script>
+
+const video = document.getElementById("video2");
+
+video.onended = function(){
+
+    document.getElementById("endingText").style.opacity="1";
+
+}
+
+</script>
 
 </body>
 </html>
