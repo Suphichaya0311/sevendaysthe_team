@@ -14,23 +14,17 @@
 
 </video>
 
-<!-- ตอนจบ -->
-
 <div id="endingText">
 
-<div class="floating floating1">🤍</div>
-<div class="floating floating2">✨</div>
-<div class="floating floating3">☁️</div>
-
-<h1 class="end1">
+<h1>
 บางช่วงเวลาในชีวิต<br>
 เราไม่ได้อยากให้มันจบเลย
 </h1>
 
-<h2 class="end2">
+<p>
 แล้วเจอกัน<br>
 ในวันที่เราเติบโต 🤍
-</h2>
+</p>
 
 </div>
 
@@ -42,7 +36,7 @@ video.onended = () => {
 
     video.style.display = "none";
 
-    document.getElementById("endingText").style.opacity = "1";
+    document.getElementById("endingText").style.display = "flex";
 
 }
 
