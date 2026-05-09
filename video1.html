@@ -2,37 +2,30 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Memory</title>
+<title>Video 1</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="video-page">
 
-<!-- เปิดคลิป -->
 <div id="overlay">
 
-    <button id="startBtn">
-        ▶ เปิดเสียง & เริ่มดู
-    </button>
+<button id="startBtn">
+▶ เปิดเสียง & เริ่มดู
+</button>
 
 </div>
 
-<!-- คลิป youtube -->
 <iframe
 id="yt"
 src="https://www.youtube.com/embed/_p_Q439Kl68?controls=0&rel=0"
 allowfullscreen>
 </iframe>
 
-<!-- หน้าข้อความ -->
 <div id="memoryScreen">
 
-<div class="floating floating1">🤍</div>
-<div class="floating floating2">✨</div>
-<div class="floating floating3">☁️</div>
-
 <h1>
-ขอบคุณที่อยู่ในทุกช่วงเวลาของกันและกันนะ
+ขอบคุณที่อยู่ในทุกช่วงเวลาของกันและกันนะ 🤍
 </h1>
 
 <p>
@@ -45,7 +38,6 @@ allowfullscreen>
 
 </div>
 
-<!-- เพลง -->
 <audio id="bgmusic">
 <source src="song.mp3" type="audio/mp3">
 </audio>
@@ -62,27 +54,22 @@ startBtn.onclick = () => {
 
     overlay.style.display = "none";
 
-    /* เล่น youtube ใหม่พร้อมเสียง */
     document.getElementById("yt").src =
     "https://www.youtube.com/embed/_p_Q439Kl68?autoplay=1&controls=0&mute=0";
 
 }
 
 /* 7 นาที 31 วิ */
+
 setTimeout(()=>{
 
-    /* ซ่อนคลิป */
     document.getElementById("yt").style.display = "none";
 
-    /* ขึ้นข้อความ */
-    memoryScreen.style.opacity = "1";
+    memoryScreen.style.display = "flex";
 
-    /* เล่นเพลง */
     bgmusic.play();
 
 },451000);
-
-/* ไปคลิป2 */
 
 nextBtn.onclick = () => {
 
